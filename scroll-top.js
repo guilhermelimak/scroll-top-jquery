@@ -10,11 +10,7 @@
       props = Object.assign(defaultProps, props);
 
       $(window).scroll(function () {
-        if ($(this).scrollTop() > props.offset) {
-          $(selector).fadeIn(props.duration);
-        } else {
-          $(selector).fadeOut(props.duration);
-        }
+        ($(this).scrollTop() > props.offset) : $(selector).fadeIn(props.duration) : $(selector).fadeOut(props.duration)
       });
 
       $(selector).click(function (event) {
